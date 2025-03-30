@@ -1,0 +1,254 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #87CEEB, #ffffff);
+    overflow: hidden;
+    overflow-x: hidden;
+}
+
+.game-container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    background: url('clouds.png') repeat-x;
+    background-size: contain;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+h1 {
+    font-size: 28px;
+    color: #444;
+}
+
+#game-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Verdana', sans-serif;
+    font-size: 3rem;
+    color: #000; /* Deep black */
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1), 
+                 0px 0px 25px rgba(0, 0, 0, 1), 
+                 0px 0px 35px rgba(0, 0, 0, 1);
+    animation: glowEffect 1.5s infinite alternate;
+}
+
+@keyframes glowEffect {
+    0% { text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); }
+    100% { text-shadow: 0px 0px 30px rgba(0, 0, 0, 1); }
+}
+#game-title {
+    font-size: 2rem; /* Smaller and neater */
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8), 
+                 0px 0px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 2s ease-in-out, glowEffect 2s infinite alternate;
+    margin-bottom: 5px; /* Brings everything a little up */
+}
+
+.controls {
+    margin-bottom: 5px; /* Moves Start & Level selection up */
+}
+
+#game-box {
+    height: 450px; /* Increases height */
+}
+#game-title {
+    font-size: 2rem; /* Smaller and neater */
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8), 
+                 0px 0px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 2s ease-in-out, glowEffect 2s infinite alternate;
+    margin-bottom: 5px; /* Brings everything a little up */
+}
+
+.controls {
+    margin-bottom: 5px; /* Moves Start & Level selection up */
+}
+
+#game-box {
+    height: 450px; /* Increases height */
+}
+
+
+
+.controls {
+    margin-bottom: 15px;
+}
+
+#level {
+    padding: 8px;
+    border-radius: 5px;
+    background: white;
+    border: 1px solid #ccc;
+}
+
+#start-button {
+    padding: 10px 20px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+#start-button:active {
+    transform: scale(0.9);
+}
+
+.timer {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#game-box {
+    position: relative;
+    width: 90%; /* Adjust width for smaller screens */
+    max-width: 600px; /* Prevent it from getting too large */
+    height: 400px; /* You can adjust this if needed */
+    margin: 0 auto;
+    background: linear-gradient(to top, #0d1b2a, #1b263b);
+    background-size: cover;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+
+
+.moon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(255, 255, 200, 0.8);
+}
+
+.star {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+/* Ensure stars stay inside the game box */
+@keyframes twinkle {
+    0% { opacity: 0.3; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1.1); }
+}
+
+
+
+
+.balloon {
+    position: absolute;
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: float 6s linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Glowing effect */
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Different Balloon Colors with Glow */
+.balloon.red { background-color: #ff0000; box-shadow: 0 0 15px #ff4d4d; }
+.balloon.blue { background-color: #007bff; box-shadow: 0 0 15px #4d94ff; }
+.balloon.green { background-color: #28a745; box-shadow: 0 0 15px #66ff66; }
+.balloon.purple { background-color: #800080; box-shadow: 0 0 15px #d580ff; }
+.balloon.pink { background-color: #ff69b4; box-shadow: 0 0 15px #ffb3d9; }
+.balloon.cyan { background-color: #00ced1; box-shadow: 0 0 15px #00ffff; }
+.balloon.magenta { background-color: #ff00ff; box-shadow: 0 0 15px #ff66ff; }
+.balloon.lime { background-color: #32cd32; box-shadow: 0 0 15px #7fff00; }
+.balloon.teal { background-color: #008080; box-shadow: 0 0 15px #20b2aa; }
+
+
+
+#scoreboard {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #222;
+}
+.score-board {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 0px 0px 10px white;
+}
+
+.score-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
+.score-box button {
+    background: #ff4757;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.score-box button:hover {
+    background: #e84118;
+}
+
+@media (max-width: 600px) {
+    #game-box {
+        width: 95%; /* Make it fit smaller screens */
+        height: 350px; /* Reduce height slightly */
+    }
+
+    #game-title {
+        font-size: 1.8rem; /* Make title smaller on mobile */
+    }
+
+    .balloon {
+        width: 40px; /* Make balloons smaller for mobile */
+        height: 60px;
+    }
+}
+
+
+

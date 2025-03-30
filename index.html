@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon Popping Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1 id="game-title">🌙 Midnight Burst: A Game by Sudeepa 🌙 </h1>
+        <div class="controls">
+            <label for="level">Select Level:</label>
+            <select id="level">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+            <button id="start-button">Start Game</button>
+        </div>
+        <div class="timer">⏳ <span id="time-left">30</span> sec</div>
+        <div id="game-box">
+            <div class="moon"></div>
+        </div>
+        <div id="scoreboard">Score: <span id="score">0</span></div>
+        <button id="restart-button" style="display: none;">Restart Game</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
